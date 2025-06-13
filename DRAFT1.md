@@ -79,7 +79,7 @@ git clone https://github.com/Coral-Protocol/coral-dbg.git
 
 <details>
 <summary>Configure and Start Server</summary>
-
+<br>
 1. Navigate to server directory:
 
 ```bash
@@ -229,7 +229,7 @@ registry:
 
 <details>
 <summary>Create a New Session</summary>
-
+<br>
 Use Postman to create a new session:
 
 **Request Details:**
