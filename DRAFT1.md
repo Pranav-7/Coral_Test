@@ -1,4 +1,5 @@
 # Building a Multi-Agent System with Coral Protocol
+![Coral Protocol](https://private-user-images.githubusercontent.com/6132323/435256185-2b74074e-42c2-4abd-9827-ea3c68b75c99.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDk4MzI5NjAsIm5iZiI6MTc0OTgzMjY2MCwicGF0aCI6Ii82MTMyMzIzLzQzNTI1NjE4NS0yYjc0MDc0ZS00MmMyLTRhYmQtOTgyNy1lYTNjNjhiNzVjOTkucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDYxMyUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTA2MTNUMTYzNzQwWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YjQwNmY4ODAzMjI1OTA0OTgwMmRhYzlmMGU1YThlNzM4ZWRiYjIyZDBlM2RjYTY2OTg3ZmU5Nzc3MzBiZTI1OSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.xNAf0-9YSL3kvU7jBtvWJeSz0HIJvQ9KFU986jxsoHY)
 
 ## Table of Contents
 
@@ -313,8 +314,8 @@ The `agentGraph` is a crucial component that defines how agents interact within 
 
    ```json
    "links": [
-     ["existing-agent", "your-new-agent"],  # Direct communication
-     ["agent1", "your-new-agent", "agent2"] # Communication through new agent
+     ["existing-agent", "your-new-agent"],  
+     ["agent1", "your-new-agent", "agent2"] 
    ]
    ```
 
