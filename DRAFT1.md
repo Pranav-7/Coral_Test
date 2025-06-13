@@ -17,7 +17,7 @@ This guide helps you build and run a multi-agent system using Coral Protocol. Wh
   - [6. Message Handling](#6-message-handling)
   - [7. Coral Debugger Setup](#7-coral-debugger-setup)
 - [Troubleshooting](#troubleshooting)
-- [Next Step](#nextstep)
+- [Next Steps](#next-steps)
 
 ## Overview
 
