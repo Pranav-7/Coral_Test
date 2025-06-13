@@ -10,12 +10,12 @@ This guide helps you build and run a multi-agent system using Coral Protocol. Wh
 - [Prerequisites](#prerequisites)
 - [Setup Guide](#setup-guide)
   - [1. Repository Setup](#1-repository-setup)
-  - [2. Backend Server Configuration](#2-backend-server-configuration)
+  - [2. Set Up the Coral Server](#2-set-up-the-coral-server)
   - [3. Session Management](#3-session-management)
   - [4. Agent Connection](#4-agent-connection)
   - [5. Thread Creation](#5-thread-creation)
   - [6. Message Handling](#6-message-handling)
-  - [7. Coral Debugger Setup](#7-coral-debugger-setup)
+  - [7. Set Up the Debugging UI](#7-set-up-the-debugging-ui)
 - [Troubleshooting](#troubleshooting)
 - [Next Steps](#next-steps)
 
@@ -75,7 +75,7 @@ git clone https://github.com/Coral-Protocol/coral-dbg.git
 
 </details>
 
-### 2. Backend Server Configuration
+### 2. Set Up the Coral Server
 
 <details>
 <summary>Configure and Start Server</summary>
@@ -435,7 +435,7 @@ GET http://127.0.0.1:5555/devmode/app/priv/YOUR_SESSION_ID/sse?agentId=my-deepre
 
 </details>
 
-### 7. Coral Debugger Setup
+### 7. Set Up the Debugging UI
 
 <details>
 <summary>Launch Debugger UI</summary>
