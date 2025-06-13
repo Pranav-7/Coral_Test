@@ -9,31 +9,32 @@ This guide walks you through setting up and using a multi-agent system with Cora
 - Postman or similar API testing tool
 - Required API keys:
   - OpenAI API Key
+  - LINKUP API Key
 
 ## Setup Steps
-### 0. Choose your agent
+### 1. Choose your agent
 
 You can choose the agents you want to use for your multi-agent system from this repo: https://github.com/Coral-Protocol/awesome-agents-for-multi-agent-systems
 
 #### Clone Coral-Interface-Agent
 ```bash
-git clone https://github.com/Coral-Protocol/coral-server.git
-cd coral-server
+git clone https://github.com/Coral-Protocol/Coral-Interface-Agent.git
+cd Coral-Interface-Agent
 ```
 
 #### Clone Human-In-Loop-Agent
 ```bash
-git clone https://github.com/Coral-Protocol/coral-server.git
-cd coral-server
+git clone https://github.com/Coral-Protocol/Human-In-Loop-Agent.git
+cd Human-In-Loop-Agent
 ```
 
 #### Clone Coral-OpenDeepResearch-Agent
 ```bash
-git clone https://github.com/Coral-Protocol/coral-server.git
-cd coral-server
+git clone https://github.com/Coral-Protocol/Coral-OpenDeepResearch-Agent.git
+cd Coral-OpenDeepResearch-Agent
 ```
 
-### 1. Backend Setup
+### 2. Backend Setup
 
 #### Clone and Configure coral-server
 ```bash
@@ -91,7 +92,7 @@ registry:
 ./gradlew run
 ```
 
-### 2. Create Session
+### 3. Create Session
 
 Using Postman or your preferred API client:
 
@@ -147,7 +148,7 @@ POST http://localhost:5555/sessions
 }
 ```
 
-### 3. Connect Agents to Session
+### 4. Connect Agents to Session
 
 Connect each agent to the session using SSE (Server-Sent Events):
 
@@ -165,7 +166,7 @@ GET http://127.0.0.1:5555/devmode/app/priv/YOUR_SESSION_ID/sse?agentId=my-human
 GET http://127.0.0.1:5555/devmode/app/priv/YOUR_SESSION_ID/sse?agentId=my-deepresearch
 ```
 
-### 4. Create Thread
+### 5. Create Thread
 
 **Request:**
 ```http
@@ -197,7 +198,7 @@ POST http://127.0.0.1:5555/debug/app/priv/YOUR_SESSION_ID/my-interface/thread/
 }
 ```
 
-### 5. Frontend Setup (coral-dbg)
+### 6. Frontend Setup (coral-dbg)
 
 #### Clone and Setup
 ```bash
@@ -219,7 +220,7 @@ The interface will be available at `http://localhost:5173`
 
 ![My Photo](./GUIDE_IMG/2.png)
 
-### 6. Send Messages
+### 7. Send Messages
 
 **Request:**
 ```http
