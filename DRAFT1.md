@@ -43,7 +43,7 @@ We'll run them with a Coral backend (`coral-server`) and visualize everything wi
 | ---------- | ------- | ---------------------------------------------- |
 | Node.js    | ≥ 18    | [Download](https://nodejs.org/)                |
 | Python     | ≥ 3.10  | [Download](https://www.python.org/downloads/)  |
-| Java (JDK) | 24      | [Download](https://jdk.java.net/24/)           |
+| Java (JDK) | >8,<24  | [Download](https://jdk.java.net/24/)           |
 | Postman    | Any     | [Download](https://www.postman.com/downloads/) |
 
 ### Required API Keys
