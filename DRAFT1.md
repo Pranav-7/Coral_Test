@@ -27,11 +27,11 @@ Coral supports multiple agent frameworks. You can pick from the [Awesome Agent L
 
 For this guide, we'll use:
 
-1. Coral Interface Agent – The Coral Interface Agent is the main interface for receiving user instructions, coordinating multi-agent tasks, and logging conversations via the terminal.
+**1. Coral Interface Agent** – The Coral Interface Agent is the main interface for receiving user instructions, coordinating multi-agent tasks, and logging conversations via the terminal.
 
-2. Human-In-Loop Agent – A communication agent that waits for messages from other agents and responds with requested fun content(joke/quote/fact).
+**2. Human-In-Loop Agent** – A communication agent that waits for messages from other agents and responds with requested fun content(joke/quote/fact).
 
-3. OpenDeepResearch Agent – The Open Deep Research agent is an open-source AI assistant that automates in-depth research and report generation via multi-agent workflows, supporting web search, structured reporting, human feedback, and API/LLM integration.
+**3. OpenDeepResearch Agent** – The Open Deep Research agent is an open-source AI assistant that automates in-depth research and report generation via multi-agent workflows, supporting web search, structured reporting, human feedback, and API/LLM integration.
 
 We'll run them with a Coral backend (`coral-server`) and visualize everything with the Coral Debugging UI (`coral-dbg`).
 
@@ -58,7 +58,7 @@ We'll run them with a Coral backend (`coral-server`) and visualize everything wi
 ### 1. Repository Setup
 
 <details>
-<summary>📁 Clone Required Repositories</summary>
+<summary>Clone Required Repositories</summary>
 
 ```bash
 # Create project directory
@@ -80,7 +80,7 @@ git clone https://github.com/Coral-Protocol/coral-dbg.git
 ### 2. Backend Server Configuration
 
 <details>
-<summary>⚙️ Configure and Start Server</summary>
+<summary>Configure and Start Server</summary>
 
 1. Navigate to server directory:
 
@@ -98,7 +98,7 @@ src/main/resources/application.yaml
 
     With the following
 
-    > ⚠️ **Important**: Don't hardcode your API keys in this file. You'll provide them dynamically via API later.
+    > **Important**: Don't hardcode your API keys in this file. You'll provide them dynamically via API later.
 
 ```yaml
 registry:
@@ -223,14 +223,14 @@ registry:
 ./gradlew run
 ```
 
-> ⚠️ **Important**: Keep the server terminal open and use a new terminal for subsequent steps.
+> **Important**: Keep the server terminal open and use a new terminal for subsequent steps.
 
 </details>
 
 ### 3. Session Management
 
 <details>
-<summary>📡 Create a New Session</summary>
+<summary>Create a New Session</summary>
 
 Use Postman to create a new session:
 
@@ -347,14 +347,14 @@ b. Update the `links` array to include the new agent:
 }
 ```
 
-> 📝 **Note**: Save the `sessionId` (`YOUR_SESSION_ID`) for future requests.
+> **Note**: Save the `sessionId` (`YOUR_SESSION_ID`) for future requests.
 
 </details>
 
 ### 4. Agent Connection
 
 <details>
-<summary>🔌 Connect Agents to Session</summary>
+<summary>Connect Agents to Session</summary>
 
 Open three separate Postman tabs and run these GET requests:
 
@@ -398,14 +398,14 @@ GET http://127.0.0.1:5555/devmode/app/priv/YOUR_SESSION_ID/sse?agentId=my-deepre
 }
 ```
 
-> 📝 **Note**: Save the returned `threadId` for future use.
+> **Note**: Save the returned `threadId` for future use.
 
 </details>
 
 ### 6. Message Handling
 
 <details>
-<summary>✉️ Send Messages</summary>
+<summary>Send Messages</summary>
 
 **Request Details:**
 
@@ -440,9 +440,9 @@ GET http://127.0.0.1:5555/devmode/app/priv/YOUR_SESSION_ID/sse?agentId=my-deepre
 ### 7. Coral Debugger Setup
 
 <details>
-<summary>🖥️ Launch Debugger UI</summary>
+<summary>Launch Debugger UI</summary>
 
-> ⚠️ **Important**: Open a new terminal window (keep coral-server running in another).
+> **Important**: Open a new terminal window (keep coral-server running in another).
 
 1. Navigate to the debugger directory:
 
@@ -472,7 +472,7 @@ yarn dev
 
 ![My Photo](./GUIDE_IMG/3.png)
 
-> 💡 **Tip**: The debugger UI provides real-time visualization of agent interactions, threads, and messages.
+> **Tip**: The debugger UI provides real-time visualization of agent interactions, threads, and messages.
 
 </details>
 
@@ -482,4 +482,4 @@ Common issues and solutions will be added here based on user feedback and experi
 
 ---
 
-> 💡 **Tip**: For the best experience, ensure all API keys are properly configured and the server is running before attempting to create sessions or send messages.
+> **Tip**: For the best experience, ensure all API keys are properly configured and the server is running before attempting to create sessions or send messages.
