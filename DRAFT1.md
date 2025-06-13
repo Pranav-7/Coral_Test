@@ -159,58 +159,63 @@ registry:
           from: "LINKUP_API_KEY"
 ```
 
-#### Understanding application.yaml Structure
+#### Understanding application.yaml Structure (Optional)
 
-The `application.yaml` file is the core configuration file for the Coral server. Here's a breakdown of its structure and how to add new agents:
+The `application.yaml` file is the core configuration file for the Coral server. Here's a detailed breakdown:
 
-1. **Registry Structure**
+<details>
+<summary>Basic Structure</summary>
 
-   ```yaml
-   registry:
-     agent-name:                       # Unique identifier for your agent
-       options:                        # Configuration options for the agent
-         - name: "API_KEY_NAME"        # Name of the environment variable
-           type: "string"              # Type of the option
-           description: "..."          # Description of the option
-       runtime:                        # Runtime configuration
-         type: "executable"            # Type of runtime (executable, docker, etc.)
-         command: [...]                # Command to start the agent
-         environment:                  # Environment variables
-           - name: "ENV_VAR"           # Environment variable name
-             from: "OPTION_NAME"       # Maps to an option defined above
-   ```
+```yaml
+registry:
+  agent-name:                       # Unique identifier for your agent
+    options:                        # Configuration options for the agent
+      - name: "API_KEY_NAME"        # Name of the environment variable
+        type: "string"              # Type of the option
+        description: "..."          # Description of the option
+    runtime:                        # Runtime configuration
+      type: "executable"            # Type of runtime (executable, docker, etc.)
+      command: [...]                # Command to start the agent
+      environment:                  # Environment variables
+        - name: "ENV_VAR"           # Environment variable name
+          from: "OPTION_NAME"       # Maps to an option defined above
+```
+</details>
 
-2. **Adding a New Agent**
-   To add a new agent to the system:
+<details>
+<summary>Adding a New Agent</summary>
 
-   Add a new entry under the `registry` section:
+Add a new entry under the `registry` section:
 
-   ```yaml
-   registry:
-     your-new-agent: # Replace with your agent's name
-       options:
-         - name: "REQUIRED_API_KEY"
-           type: "string"
-           description: "Description of the API key"
-       runtime:
-         type: "executable"
-         command:
-           [
-             "bash",
-             "-c",
-             "cd ../Your-Agent-Directory && uv sync && uv run python your_agent.py",
-           ]
-         environment:
-           - name: "REQUIRED_API_KEY"
-             from: "REQUIRED_API_KEY"
-   ```
+```yaml
+registry:
+  your-new-agent: # Replace with your agent's name
+    options:
+      - name: "REQUIRED_API_KEY"
+        type: "string"
+        description: "Description of the API key"
+    runtime:
+      type: "executable"
+      command:
+        [
+          "bash",
+          "-c",
+          "cd ../Your-Agent-Directory && uv sync && uv run python your_agent.py",
+        ]
+      environment:
+        - name: "REQUIRED_API_KEY"
+          from: "REQUIRED_API_KEY"
+```
+</details>
 
-> 💡 **Tips for Agent Configuration**:
->
+<details>
+<summary>Tips for Agent Configuration</summary>
+
 > - Each agent must have a unique name in the registry
 > - Environment variables must be properly mapped from options
 > - Command paths should be relative to the coral-server directory
 > - Make sure all required dependencies are installed in the agent's directory
+</details>
 
 3. Start the server:
 
@@ -270,64 +275,67 @@ Use Postman to create a new session:
 }
 ```
 
-#### Understanding Agent Graph Structure
+#### Understanding Agent Graph Structure (Optional)
 
 The `agentGraph` is a crucial component that defines how agents interact within a session. Here's a detailed breakdown:
 
-1. **Basic Structure**
+<details>
+<summary>Basic Structure</summary>
 
-   ```json
-   "agentGraph": {
-     "agents": {                      
-       "agent-id": {                  
-         "type": "local",             
-         "agentType": "agent-name",   
-         "options": {                 
-           "API_KEY": "value"         
-         }
-       }
-     },
-     "links": [                       
-       ["agent1", "agent2", "agent3"] 
-     ]
-   }
-   ```
+```json
+"agentGraph": {
+  "agents": {                      
+    "agent-id": {                  
+      "type": "local",             
+      "agentType": "agent-name",   
+      "options": {                 
+        "API_KEY": "value"         
+      }
+    }
+  },
+  "links": [                       
+    ["agent1", "agent2", "agent3"] 
+  ]
+}
+```
+</details>
 
-2. **Adding a New Agent to the Graph**
-   To add a new agent to your session:
+<details>
+<summary>Adding a New Agent to the Graph</summary>
 
-   a. Add a new entry in the `agents` object:
+a. Add a new entry in the `agents` object:
+```json
+"agents": {
+  "your-new-agent": {
+    "type": "local",
+    "agentType": "your-new-agent",  
+    "options": {
+      "REQUIRED_API_KEY": "YOUR_API_KEY",
+      "OTHER_OPTION": "value"
+    }
+  }
+}
+```
 
-   ```json
-   "agents": {
-     "your-new-agent": {
-       "type": "local",
-       "agentType": "your-new-agent",  
-       "options": {
-         "REQUIRED_API_KEY": "YOUR_API_KEY",
-         "OTHER_OPTION": "value"
-       }
-     }
-   }
-   ```
+b. Update the `links` array to include the new agent:
+```json
+"links": [
+  ["existing-agent", "your-new-agent"],  
+  ["agent1", "your-new-agent", "agent2"] 
+]
+```
+</details>
 
-   b. Update the `links` array to include the new agent:
+<details>
+<summary>Tips for Agent Graph Configuration</summary>
 
-   ```json
-   "links": [
-     ["existing-agent", "your-new-agent"],  
-     ["agent1", "your-new-agent", "agent2"] 
-   ]
-   ```
-
-> 💡 **Tips for Agent Graph Configuration**:
->
 > - Each agent ID must be unique within the session
 > - The `agentType` must match a registered agent in application.yaml
 > - Links define the communication flow between agents
 > - Agents can be part of multiple communication paths
 > - Circular dependencies in links are allowed but should be used carefully
 > - All required options (API keys, etc.) must be provided for each agent
+</details>
 
 **Expected Response:**
 
