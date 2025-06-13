@@ -276,17 +276,17 @@ The `agentGraph` is a crucial component that defines how agents interact within 
 
    ```json
    "agentGraph": {
-     "agents": {                      # Dictionary of all agents in the session
-       "agent-id": {                  # Unique identifier for the agent
-         "type": "local",             # Type of agent deployment
-         "agentType": "agent-name",   # Must match registry name in application.yaml
-         "options": {                 # Agent-specific configuration
-           "API_KEY": "value"         # Required API keys and options
+     "agents": {                      
+       "agent-id": {                  
+         "type": "local",             
+         "agentType": "agent-name",   
+         "options": {                 
+           "API_KEY": "value"         
          }
        }
      },
-     "links": [                       # Defines communication paths between agents
-       ["agent1", "agent2", "agent3"] # Array of agent IDs in communication order
+     "links": [                       
+       ["agent1", "agent2", "agent3"] 
      ]
    }
    ```
@@ -300,7 +300,7 @@ The `agentGraph` is a crucial component that defines how agents interact within 
    "agents": {
      "your-new-agent": {
        "type": "local",
-       "agentType": "your-new-agent",  // Must match registry name
+       "agentType": "your-new-agent",  
        "options": {
          "REQUIRED_API_KEY": "YOUR_API_KEY",
          "OTHER_OPTION": "value"
