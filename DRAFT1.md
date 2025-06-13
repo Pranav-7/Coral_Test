@@ -17,10 +17,11 @@ This guide helps you build and run a multi-agent system using Coral Protocol. Wh
   - [6. Message Handling](#6-message-handling)
   - [7. Coral Debugger Setup](#7-coral-debugger-setup)
 - [Troubleshooting](#troubleshooting)
+- [Next Step](#nextstep)
 
 ## Overview
 
-Coral Protocol provides collaboration infrastructure for AI agents. It enables communication, coordination, trust, and payments for the Internet of Agents, laying the foundation for safe AGI.
+[Coral Protocol](https://www.coralprotocol.org/) provides collaboration infrastructure for AI agents. It enables communication, coordination, trust, and payments for the Internet of Agents, laying the foundation for safe AGI.
 
 Coral supports multiple agent frameworks. You can pick from the [Awesome Agent List](https://github.com/Coral-Protocol/awesome-agents-for-multi-agent-systems)
 
@@ -33,8 +34,6 @@ For this guide, we'll use:
 **3. OpenDeepResearch Agent** – The Open Deep Research agent is an open-source AI assistant that automates in-depth research and report generation via multi-agent workflows, supporting web search, structured reporting, human feedback, and API/LLM integration.
 
 We'll run them with a Coral backend (`coral-server`) and visualize everything with the Coral Debugging UI (`coral-dbg`).
-
-> **Learn More**: [What is Coral Protocol?](https://docs.coralprotocol.org/CoralDoc/Introduction/WhatisCoralProtocol)
 
 ## Prerequisites
 
@@ -482,3 +481,18 @@ Common issues and solutions will be added here based on user feedback and experi
 ---
 
 > **Tip**: For the best experience, ensure all API keys are properly configured and the server is running before attempting to create sessions or send messages.
+
+### Next Steps
+Congratulations! You've successfully built and run a multi-agent system. Here's what you can do next:
+
+-Experiment with Different Agents
+  -Try agents from the awesome-agents repository
+  -Mix and match different agent types
+  -Create your own custom agents
+
+-Build More Complex Workflows
+  -Create multi-step processes
+  -Add conditional logic to agent interactions
+  -Experiment with different communication patterns
+
+> **Learn More**: [What is Coral Protocol?](https://docs.coralprotocol.org/CoralDoc/Introduction/WhatisCoralProtocol)
