@@ -1,4 +1,7 @@
 # Building a Multi-Agent System with Coral Protocol
+
+This guide helps you build and run a multi-agent system using Coral Protocol. Whether you're experienced with agents or just getting started, follow this step-by-step to set up, run, and visualize agent interactions.
+
 ![Coral Protocol](https://private-user-images.githubusercontent.com/6132323/435256185-2b74074e-42c2-4abd-9827-ea3c68b75c99.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDk4MzI5NjAsIm5iZiI6MTc0OTgzMjY2MCwicGF0aCI6Ii82MTMyMzIzLzQzNTI1NjE4NS0yYjc0MDc0ZS00MmMyLTRhYmQtOTgyNy1lYTNjNjhiNzVjOTkucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDYxMyUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTA2MTNUMTYzNzQwWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YjQwNmY4ODAzMjI1OTA0OTgwMmRhYzlmMGU1YThlNzM4ZWRiYjIyZDBlM2RjYTY2OTg3ZmU5Nzc3MzBiZTI1OSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.xNAf0-9YSL3kvU7jBtvWJeSz0HIJvQ9KFU986jxsoHY)
 
 ## Table of Contents
@@ -19,8 +22,6 @@
 ## Overview
 
 Coral Protocol provides collaboration infrastructure for AI agents. It enables communication, coordination, trust, and payments for the Internet of Agents, laying the foundation for safe AGI.
-
-This guide helps you build and run a multi-agent system using Coral Protocol. Whether you're experienced with agents or just getting started, follow this step-by-step to set up, run, and visualize agent interactions.
 
 Coral supports multiple agent frameworks. You can pick from the [Awesome Agent List](https://github.com/Coral-Protocol/awesome-agents-for-multi-agent-systems)
 
