@@ -485,14 +485,14 @@ Common issues and solutions will be added here based on user feedback and experi
 ### Next Steps
 Congratulations! You've successfully built and run a multi-agent system. Here's what you can do next:
 
--Experiment with Different Agents
-  -Try agents from the awesome-agents repository
-  -Mix and match different agent types
-  -Create your own custom agents
+- Experiment with Different Agents
+  - Try agents from the awesome-agents repository
+  - Mix and match different agent types
+  - Create your own custom agents
 
--Build More Complex Workflows
-  -Create multi-step processes
-  -Add conditional logic to agent interactions
-  -Experiment with different communication patterns
+- Build More Complex Workflows
+  - Create multi-step processes
+  - Add conditional logic to agent interactions
+  - Experiment with different communication patterns
 
 > **Learn More**: [What is Coral Protocol?](https://docs.coralprotocol.org/CoralDoc/Introduction/WhatisCoralProtocol)
