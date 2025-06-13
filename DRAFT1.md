@@ -8,7 +8,6 @@ This guide helps you build and run a multi-agent system using Coral Protocol. Wh
 
 - [Overview](#overview)
 - [Prerequisites](#prerequisites)
-- [System Architecture](#system-architecture)
 - [Setup Guide](#setup-guide)
   - [1. Repository Setup](#1-repository-setup)
   - [2. Backend Server Configuration](#2-backend-server-configuration)
