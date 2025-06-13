@@ -353,7 +353,7 @@ b. Update the `links` array to include the new agent:
 
 <details>
 <summary>Connect Agents to Session</summary>
-
+<br>
 Open three separate Postman tabs and run these GET requests:
 
 ```http
