@@ -461,7 +461,7 @@ yarn dev
 
 - Open [http://localhost:5173](http://localhost:5173) in your browser
 
-![My Photo](./GUIDE_IMG/2.png)
+![My Photo](./1.png)
 
 - Connect using these credentials:
   - Server URL: `http://127.0.0.1:5555`
@@ -469,7 +469,7 @@ yarn dev
   - Privacy Key: `priv`
   - Session ID: `YOUR_SESSION_ID`
 
-![My Photo](./GUIDE_IMG/3.png)
+![My Photo](./2.png)
 
 > **Tip**: The debugger UI provides real-time visualization of agent interactions, threads, and messages.
 
