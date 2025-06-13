@@ -25,7 +25,7 @@ Coral supports multiple agent frameworks. You can pick from the [Awesome Agent L
 
 For this guide, we'll use:
 
-1. Coral Interface Agent – Coral Interface Agent is the main interface for receiving user instructions, coordinating multi-agent tasks, and logging conversations via the terminal.
+1. Coral Interface Agent – The Coral Interface Agent is the main interface for receiving user instructions, coordinating multi-agent tasks, and logging conversations via the terminal.
 
 2. Human-In-Loop Agent – A communication agent that waits for messages from other agents and responds with requested fun content(joke/quote/fact).
 
@@ -33,7 +33,7 @@ For this guide, we'll use:
 
 We'll run them with a Coral backend (`coral-server`) and visualize everything with the Coral Debugging UI (`coral-dbg`).
 
-> 📚 **Learn More**: [What is Coral Protocol?](https://docs.coralprotocol.org/CoralDoc/Introduction/WhatisCoralProtocol)
+> **Learn More**: [What is Coral Protocol?](https://docs.coralprotocol.org/CoralDoc/Introduction/WhatisCoralProtocol)
 
 ## Prerequisites
 
@@ -165,17 +165,17 @@ The `application.yaml` file is the core configuration file for the Coral server.
 
    ```yaml
    registry:
-     agent-name: # Unique identifier for your agent
-       options: # Configuration options for the agent
-         - name: "API_KEY_NAME" # Name of the environment variable
-           type: "string" # Type of the option
-           description: "..." # Description of the option
-       runtime: # Runtime configuration
-         type: "executable" # Type of runtime (executable, docker, etc.)
-         command: [...] # Command to start the agent
-         environment: # Environment variables
-           - name: "ENV_VAR" # Environment variable name
-             from: "OPTION_NAME" # Maps to an option defined above
+     agent-name:                       # Unique identifier for your agent
+       options:                        # Configuration options for the agent
+         - name: "API_KEY_NAME"        # Name of the environment variable
+           type: "string"              # Type of the option
+           description: "..."          # Description of the option
+       runtime:                        # Runtime configuration
+         type: "executable"            # Type of runtime (executable, docker, etc.)
+         command: [...]                # Command to start the agent
+         environment:                  # Environment variables
+           - name: "ENV_VAR"           # Environment variable name
+             from: "OPTION_NAME"       # Maps to an option defined above
    ```
 
 2. **Adding a New Agent**
@@ -276,17 +276,17 @@ The `agentGraph` is a crucial component that defines how agents interact within 
 
    ```json
    "agentGraph": {
-     "agents": {                    // Dictionary of all agents in the session
-       "agent-id": {                // Unique identifier for the agent
-         "type": "local",           // Type of agent deployment
-         "agentType": "agent-name", // Must match registry name in application.yaml
-         "options": {               // Agent-specific configuration
-           "API_KEY": "value"       // Required API keys and options
+     "agents": {                      # Dictionary of all agents in the session
+       "agent-id": {                  # Unique identifier for the agent
+         "type": "local",             # Type of agent deployment
+         "agentType": "agent-name",   # Must match registry name in application.yaml
+         "options": {                 # Agent-specific configuration
+           "API_KEY": "value"         # Required API keys and options
          }
        }
      },
-     "links": [                     // Defines communication paths between agents
-       ["agent1", "agent2", "agent3"] // Array of agent IDs in communication order
+     "links": [                       # Defines communication paths between agents
+       ["agent1", "agent2", "agent3"] # Array of agent IDs in communication order
      ]
    }
    ```
@@ -313,8 +313,8 @@ The `agentGraph` is a crucial component that defines how agents interact within 
 
    ```json
    "links": [
-     ["existing-agent", "your-new-agent"],  // Direct communication
-     ["agent1", "your-new-agent", "agent2"] // Communication through new agent
+     ["existing-agent", "your-new-agent"],  # Direct communication
+     ["agent1", "your-new-agent", "agent2"] # Communication through new agent
    ]
    ```
 
